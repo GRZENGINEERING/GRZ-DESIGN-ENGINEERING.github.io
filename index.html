@@ -26,8 +26,6 @@ body{
   font-family:'Barlow Condensed',sans-serif;
   overflow-x:hidden;
 }
-
-/* CARBON FIBER BG */
 body::before{
   content:'';
   position:fixed;
@@ -39,8 +37,6 @@ body::before{
   pointer-events:none;
   z-index:0;
 }
-
-/* SCAN LINE */
 body::after{
   content:'';
   position:fixed;
@@ -49,10 +45,7 @@ body::after{
   pointer-events:none;
   z-index:0;
 }
-
 section,header,footer{position:relative;z-index:1;}
-
-/* HERO */
 header{
   min-height:100vh;
   display:flex;
@@ -70,423 +63,75 @@ header::before{
   height:3px;
   background:linear-gradient(90deg,transparent,var(--copper),var(--copper-light),var(--copper),transparent);
 }
-
-.hero-tag{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  letter-spacing:0.2em;
-  color:var(--copper);
-  text-transform:uppercase;
-  margin-bottom:1rem;
-  opacity:0;
-  animation:fadeUp 0.6s ease forwards 0.2s;
-}
-.hero-name{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(72px,14vw,160px);
-  line-height:0.9;
-  letter-spacing:0.02em;
-  color:var(--text);
-  margin-bottom:0.5rem;
-  opacity:0;
-  animation:fadeUp 0.7s ease forwards 0.35s;
-}
-.hero-name span{
-  -webkit-text-stroke:1px var(--copper);
-  color:transparent;
-}
-.hero-title{
-  font-size:clamp(16px,3vw,28px);
-  font-weight:300;
-  letter-spacing:0.15em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:2.5rem;
-  opacity:0;
-  animation:fadeUp 0.7s ease forwards 0.5s;
-}
-.hero-chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:3rem;
-  opacity:0;
-  animation:fadeUp 0.7s ease forwards 0.65s;
-}
-.chip{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  padding:5px 12px;
-  border:1px solid var(--copper-dark);
-  color:var(--copper);
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-}
-.hero-contact{
-  font-family:'DM Mono',monospace;
-  font-size:13px;
-  color:var(--muted);
-  display:flex;
-  flex-wrap:wrap;
-  gap:2rem;
-  opacity:0;
-  animation:fadeUp 0.7s ease forwards 0.8s;
-}
+.hero-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--copper);text-transform:uppercase;margin-bottom:1rem;opacity:0;animation:fadeUp 0.6s ease forwards 0.2s;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,14vw,160px);line-height:0.9;letter-spacing:0.02em;color:var(--text);margin-bottom:0.5rem;opacity:0;animation:fadeUp 0.7s ease forwards 0.35s;}
+.hero-name span{-webkit-text-stroke:1px var(--copper);color:transparent;}
+.hero-title{font-size:clamp(16px,3vw,28px);font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.7s ease forwards 0.5s;}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:3rem;opacity:0;animation:fadeUp 0.7s ease forwards 0.65s;}
+.chip{font-family:'DM Mono',monospace;font-size:11px;padding:5px 12px;border:1px solid var(--copper-dark);color:var(--copper);letter-spacing:0.08em;text-transform:uppercase;}
+.hero-contact{font-family:'DM Mono',monospace;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:2rem;opacity:0;animation:fadeUp 0.7s ease forwards 0.8s;}
 .hero-contact a{color:var(--steel);text-decoration:none;transition:color 0.2s;}
 .hero-contact a:hover{color:var(--copper);}
-
-.hero-bg-text{
-  position:absolute;
-  right:-2vw;
-  top:50%;
-  transform:translateY(-50%);
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(120px,22vw,280px);
-  color:rgba(184,115,51,0.04);
-  letter-spacing:0.05em;
-  pointer-events:none;
-  user-select:none;
-  white-space:nowrap;
-}
-
-/* COPPER DIVIDER */
-.copper-line{
-  width:100%;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--copper-dark),var(--copper),var(--copper-dark),transparent);
-  margin:0;
-}
-
-/* STATS BAR */
-.stats-bar{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  border-bottom:1px solid #1e1e1e;
-}
-.stat{
-  padding:2rem 2rem;
-  border-right:1px solid #1e1e1e;
-  position:relative;
-}
+.hero-bg-text{position:absolute;right:-2vw;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(120px,22vw,280px);color:rgba(184,115,51,0.04);letter-spacing:0.05em;pointer-events:none;user-select:none;white-space:nowrap;}
+.copper-line{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--copper-dark),var(--copper),var(--copper-dark),transparent);margin:0;}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #1e1e1e;}
+.stat{padding:2rem 2rem;border-right:1px solid #1e1e1e;position:relative;}
 .stat:last-child{border-right:none;}
-.stat-val{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:52px;
-  color:var(--copper);
-  line-height:1;
-  margin-bottom:4px;
-}
-.stat-label{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  line-height:1.4;
-}
-
-/* SECTIONS */
-.section{
-  padding:5rem 6vw;
-  border-bottom:1px solid #1a1a1a;
-}
-.section-label{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  letter-spacing:0.2em;
-  color:var(--copper);
-  text-transform:uppercase;
-  margin-bottom:0.75rem;
-}
-.section-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(40px,6vw,72px);
-  letter-spacing:0.03em;
-  line-height:1;
-  margin-bottom:3rem;
-  color:var(--text);
-}
-
-/* EXPERIENCE */
-.exp-card{
-  background:var(--dark2);
-  border:1px solid #222;
-  border-left:3px solid var(--copper);
-  padding:2rem 2.5rem;
-  margin-bottom:1.5rem;
-  position:relative;
-  overflow:hidden;
-}
-.exp-card::before{
-  content:'';
-  position:absolute;
-  top:0;right:0;
-  width:200px;height:200px;
-  background:radial-gradient(circle at top right,rgba(184,115,51,0.06),transparent 70%);
-  pointer-events:none;
-}
-.exp-company{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:32px;
-  color:var(--text);
-  letter-spacing:0.05em;
-  margin-bottom:2px;
-}
-.exp-role{
-  font-size:15px;
-  font-weight:600;
-  color:var(--copper-light);
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  margin-bottom:4px;
-}
-.exp-meta{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:0.08em;
-  margin-bottom:1.25rem;
-}
-.exp-bullets{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.exp-bullets li{
-  font-size:15px;
-  font-weight:300;
-  color:#aaa;
-  padding-left:16px;
-  position:relative;
-  line-height:1.5;
-}
-.exp-bullets li::before{
-  content:'';
-  position:absolute;
-  left:0;top:9px;
-  width:5px;height:1px;
-  background:var(--copper);
-}
-
-/* PROJECTS GRID */
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:1px;
-  background:#1a1a1a;
-  border:1px solid #1a1a1a;
-}
-.project-card{
-  background:var(--dark2);
-  padding:2.5rem 2rem;
-  position:relative;
-  overflow:hidden;
-  transition:background 0.3s;
-}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--copper);line-height:1;margin-bottom:4px;}
+.stat-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;line-height:1.4;}
+.section{padding:5rem 6vw;border-bottom:1px solid #1a1a1a;}
+.section-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--copper);text-transform:uppercase;margin-bottom:0.75rem;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);letter-spacing:0.03em;line-height:1;margin-bottom:3rem;color:var(--text);}
+.exp-card{background:var(--dark2);border:1px solid #222;border-left:3px solid var(--copper);padding:2rem 2.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
+.exp-card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle at top right,rgba(184,115,51,0.06),transparent 70%);pointer-events:none;}
+.exp-company{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--text);letter-spacing:0.05em;margin-bottom:2px;}
+.exp-role{font-size:15px;font-weight:600;color:var(--copper-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;}
+.exp-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.08em;margin-bottom:1.25rem;}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.exp-bullets li{font-size:15px;font-weight:300;color:#aaa;padding-left:16px;position:relative;line-height:1.5;}
+.exp-bullets li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--copper);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#1a1a1a;border:1px solid #1a1a1a;}
+.project-card{background:var(--dark2);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s;}
 .project-card:hover{background:var(--dark3);}
-.project-card::after{
-  content:'';
-  position:absolute;
-  bottom:0;left:0;right:0;
-  height:2px;
-  background:linear-gradient(90deg,var(--copper),transparent);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform 0.3s ease;
-}
+.project-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--copper),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
 .project-card:hover::after{transform:scaleX(1);}
-.project-num{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:48px;
-  color:rgba(184,115,51,0.15);
-  line-height:1;
-  margin-bottom:0.5rem;
-}
-.project-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:26px;
-  letter-spacing:0.05em;
-  color:var(--text);
-  margin-bottom:0.75rem;
-  line-height:1.1;
-}
-.project-desc{
-  font-size:14px;
-  font-weight:300;
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:1rem;
-}
-.project-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-}
-.project-tag{
-  font-family:'DM Mono',monospace;
-  font-size:10px;
-  padding:3px 8px;
-  background:var(--dark4);
-  color:#666;
-  letter-spacing:0.06em;
-}
-
-/* SKILLS */
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:1px;
-  background:#1a1a1a;
-  border:1px solid #1a1a1a;
-}
-.skill-group{
-  background:var(--dark2);
-  padding:1.75rem 2rem;
-}
-.skill-group-title{
-  font-family:'DM Mono',monospace;
-  font-size:10px;
-  letter-spacing:0.15em;
-  color:var(--copper);
-  text-transform:uppercase;
-  margin-bottom:1rem;
-  padding-bottom:0.5rem;
-  border-bottom:1px solid #222;
-}
-.skill-list{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-.skill-list li{
-  font-size:14px;
-  font-weight:400;
-  color:#999;
-  padding-left:12px;
-  position:relative;
-}
-.skill-list li::before{
-  content:'';
-  position:absolute;
-  left:0;top:8px;
-  width:4px;height:1px;
-  background:var(--copper-dark);
-}
-
-/* EDUCATION */
-.edu-card{
-  background:var(--dark2);
-  border:1px solid #222;
-  padding:2rem 2.5rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:1rem;
-}
-.edu-degree{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:28px;
-  letter-spacing:0.05em;
-  color:var(--text);
-  margin-bottom:4px;
-}
-.edu-school{
-  font-family:'DM Mono',monospace;
-  font-size:12px;
-  color:var(--muted);
-  letter-spacing:0.1em;
-}
-.edu-field{
-  font-size:15px;
-  font-weight:300;
-  color:var(--copper-light);
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-}
-
-/* FOOTER */
-footer{
-  padding:3rem 6vw;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:1rem;
-  border-top:1px solid #1a1a1a;
-}
-footer::before{
-  content:'';
-  position:absolute;
-  bottom:0;left:0;right:0;
-  height:2px;
-  background:linear-gradient(90deg,transparent,var(--copper),transparent);
-}
-.footer-name{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:22px;
-  letter-spacing:0.1em;
-  color:var(--copper);
-}
-.footer-links{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:0.1em;
-  display:flex;
-  gap:1.5rem;
-  flex-wrap:wrap;
-}
+.project-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(184,115,51,0.15);line-height:1;margin-bottom:0.5rem;}
+.project-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.05em;color:var(--text);margin-bottom:0.75rem;line-height:1.1;}
+.project-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:1rem;}
+.project-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.project-tag{font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;letter-spacing:0.06em;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#1a1a1a;border:1px solid #1a1a1a;}
+.skill-group{background:var(--dark2);padding:1.75rem 2rem;}
+.skill-group-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid #222;}
+.skill-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.skill-list li{font-size:14px;font-weight:400;color:#999;padding-left:12px;position:relative;}
+.skill-list li::before{content:'';position:absolute;left:0;top:8px;width:4px;height:1px;background:var(--copper-dark);}
+.edu-card{background:var(--dark2);border:1px solid #222;padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.edu-degree{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.05em;color:var(--text);margin-bottom:4px;}
+.edu-school{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:0.1em;}
+.edu-field{font-size:15px;font-weight:300;color:var(--copper-light);letter-spacing:0.08em;text-transform:uppercase;}
+footer{padding:3rem 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid #1a1a1a;}
+footer::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--copper),transparent);}
+.footer-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.1em;color:var(--copper);}
+.footer-links{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.1em;display:flex;gap:1.5rem;flex-wrap:wrap;}
 .footer-links a{color:var(--muted);text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:var(--copper);}
-
-.nfc-badge{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  color:var(--copper);
-  letter-spacing:0.1em;
-}
-.nfc-dot{
-  width:10px;height:10px;
-  border:1.5px solid var(--copper);
-  border-radius:50%;
-  position:relative;
-}
-.nfc-dot::after{
-  content:'';
-  position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:4px;height:4px;
-  background:var(--copper);
-  border-radius:50%;
-}
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@media(max-width:768px){
-  .stats-bar{grid-template-columns:repeat(2,1fr);}
-  .hero-name{font-size:clamp(60px,18vw,120px);}
-  .hero-bg-text{display:none;}
-  .edu-card{flex-direction:column;}
-}
+.nfc-badge{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:var(--copper);letter-spacing:0.1em;}
+.nfc-dot{width:10px;height:10px;border:1.5px solid var(--copper);border-radius:50%;position:relative;}
+.nfc-dot::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:4px;height:4px;background:var(--copper);border-radius:50%;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:768px){.stats-bar{grid-template-columns:repeat(2,1fr);}.hero-name{font-size:clamp(60px,18vw,120px);}.hero-bg-text{display:none;}.edu-card{flex-direction:column;}}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <header>
   <div class="hero-bg-text">GRZ</div>
   <div class="hero-tag">// Off-Road · Motorsport · Fabrication</div>
-  <h1 class="hero-name">Gerardo<br/><span>Ruiz</span> Zendejas</h1>
+  <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:0.5rem;">
+    <img src="grzlogo.png" alt="GRZ Engineering Logo" style="width:90px;height:auto;filter:invert(1) brightness(0.85);opacity:0.9;flex-shrink:0;"/>
+    <h1 class="hero-name" style="margin-bottom:0;">Gerardo<br/><span>Ruiz</span> Zendejas</h1>
+  </div>
   <div class="hero-title">Design Engineer &nbsp;·&nbsp; CAD / CAM / FEA &nbsp;·&nbsp; Vehicle Development</div>
   <div class="hero-chips">
     <span class="chip">SolidWorks</span>
@@ -496,7 +141,7 @@ footer::before{
     <span class="chip">Suspension Design</span>
     <span class="chip">EFI Tuning</span>
     <span class="chip">3D Scanning</span>
-    <span class="chip">Prototype Fabrication</span>
+    <span class="chip">Additive Manufacturing</span>
     <span class="chip">EPS Integration</span>
   </div>
   <div class="hero-contact">
@@ -509,88 +154,120 @@ footer::before{
 
 <div class="copper-line"></div>
 
-<!-- MUSTANG HERO PHOTO -->
 <div style="position:relative;width:100%;height:70vh;overflow:hidden;z-index:1;">
-  <img src="mustang.jpeg" alt="1965 Ford Mustang — GRZ Engineering Build"
-    style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;"/>
+  <img src="mustang.jpeg" alt="1965 Ford Mustang" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;"/>
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,0.3) 0%,transparent 30%,transparent 60%,rgba(8,8,8,0.95) 100%);"></div>
   <div style="position:absolute;bottom:2.5rem;left:6vw;right:6vw;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
     <div>
       <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">// Project 01</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,52px);color:#fff;letter-spacing:0.04em;line-height:1;">1965 Ford Mustang</div>
-      <div style="font-size:14px;font-weight:300;color:#aaa;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Full Restoration · Supercharged · Custom EPS · Fabricated</div>
+      <div style="font-size:14px;font-weight:300;color:#aaa;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Rotisserie Restoration · Custom Fabrication · All Done By Me</div>
     </div>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">347</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CU IN STROKER</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">174</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">WHIPPLE S/C</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">EPS</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CUSTOM DESIGNED</div>
-      </div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">347</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CU IN STROKER</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">B&M</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">ROOTS STYLE BLOWER</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">EPS</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CUSTOM DESIGNED</div></div>
     </div>
   </div>
 </div>
 
 <div class="copper-line"></div>
 
-<!-- STATS -->
 <div class="stats-bar">
-  <div class="stat">
-    <div class="stat-val">2.5</div>
-    <div class="stat-label">Years at<br/>Honda Racing Corp</div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">ENG</div>
-    <div class="stat-label">Engine<br/>Development</div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">4</div>
-    <div class="stat-label">Axis CNC<br/>Machining</div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">3</div>
-    <div class="stat-label">Associate<br/>Degrees</div>
-  </div>
+  <div class="stat"><div class="stat-val">2.5</div><div class="stat-label">Years at<br/>Honda Racing Corp</div></div>
+  <div class="stat"><div class="stat-val">ENG</div><div class="stat-label">Engine<br/>Development</div></div>
+  <div class="stat"><div class="stat-val" style="font-size:36px;">3&4</div><div class="stat-label">Axis CNC<br/>Machining</div></div>
+  <div class="stat"><div class="stat-val">3</div><div class="stat-label">Associate<br/>Degrees</div></div>
 </div>
 
 <div class="copper-line"></div>
 
-<!-- FABRICATION GALLERY -->
 <section class="section" style="padding-top:4rem;padding-bottom:0;">
-  <div class="section-label">// Fabrication Work</div>
-  <div class="section-title">Made By Hand</div>
+  <div class="section-label">// Design Engineering · Prototype to Production</div>
+  <div class="section-title">Concept. Design. Validate. Build.</div>
 </section>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#111;position:relative;z-index:1;">
   <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
-    <img src="fab1.jpg" alt="GRZ branded orange suspension bracket on carbon fiber"
-      style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;"/>
+    <img src="fab1.jpg" alt="GRZ Trans-Am firewall support" style="width:100%;height:100%;object-fit:cover;display:block;"/>
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.85) 0%,transparent 50%);pointer-events:none;"></div>
     <div style="position:absolute;bottom:1.5rem;left:1.5rem;">
-      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:4px;">Suspension Component</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:0.05em;">GRZ Branded Bracket Assembly</div>
-      <div style="font-size:13px;font-weight:300;color:#888;margin-top:2px;">Powder coated · Rod end joints · Custom designed & fabricated</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:4px;">CNC Produced · Welded · FEA Validated</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:0.05em;">GRZ Trans-Am Style Firewall Support</div>
+      <div style="font-size:13px;font-weight:300;color:#888;margin-top:2px;">1964–70 Mustang · CNC produced · Welded together · FEA validated</div>
     </div>
   </div>
   <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
-    <img src="fab2.jpg" alt="CNC machined aluminum billet bracket on carbon fiber"
-      style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;"/>
+    <img src="fab2.jpg" alt="FEA Validated EPS Bracket" style="width:100%;height:100%;object-fit:cover;display:block;"/>
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.85) 0%,transparent 50%);pointer-events:none;"></div>
     <div style="position:absolute;bottom:1.5rem;left:1.5rem;">
-      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:4px;">CNC Machined</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:0.05em;">Billet Aluminum Bracket</div>
-      <div style="font-size:13px;font-weight:300;color:#888;margin-top:2px;">GRZ logo engraved · 3-axis CNC · CAD to production</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:4px;">Electric Power Steering · Modern Tech Classic Ride</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:0.05em;">FEA Validated Electric Power Steering Bracket</div>
+      <div style="font-size:13px;font-weight:300;color:#888;margin-top:2px;">1964–68 Mustang · Modern tech · Classic ride · FEA validated</div>
     </div>
   </div>
 </div>
+
+<div style="position:relative;width:100%;height:75vh;overflow:hidden;z-index:1;">
+  <img src="hrc.jpg" alt="Gerardo at Honda Racing Corporation with Hoonigan Ridgeline" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;"/>
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,0.3) 0%,transparent 25%,transparent 50%,rgba(8,8,8,0.97) 100%);"></div>
+  <div style="position:absolute;bottom:2.5rem;left:6vw;right:6vw;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">// Honda Racing Corporation · Santa Clarita, CA</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,56px);color:#fff;letter-spacing:0.04em;line-height:1;">HRC · Hoonigan Ridgeline Project</div>
+      <div style="font-size:14px;font-weight:300;color:#aaa;letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">Engineering Technician · Performance Tune Development · 2.5 Years</div>
+    </div>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">HPD</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">HONDA RACING</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">2.5</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">YEARS ON SITE</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">PRO</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">MOTORSPORT ENG.</div></div>
+    </div>
+  </div>
+</div>
+<div class="copper-line"></div>
+
+<section class="section">
+  <div class="section-label">// Installed & Validated · 1965 Mustang</div>
+  <div class="section-title">Engineered. Installed. Proven.</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a;border:1px solid #1a1a1a;">
+    <div style="background:var(--dark2);">
+      <div style="position:relative;height:300px;overflow:hidden;">
+        <img src="transam.jpg" alt="Trans-Am firewall support installed" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(8,8,8,0.95) 100%);"></div>
+      </div>
+      <div style="padding:1.5rem 2rem 2rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">CNC Produced · Welded · FEA Validated</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--text);letter-spacing:0.05em;margin-bottom:6px;">GRZ Trans-Am Firewall Support — Installed</div>
+        <div style="font-size:13px;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:1rem;">Trans-Am style engine bay support CNC produced, welded, and FEA validated — installed in the 1965 Mustang alongside a Wilwood master cylinder and GRZ fabricated brackets.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">CNC Produced</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">Welded</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">FEA Validated</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">1965 Mustang</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--dark2);">
+      <div style="position:relative;height:300px;overflow:hidden;">
+        <img src="eps.jpg" alt="Custom EPS installed in 1965 Mustang" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(8,8,8,0.95) 100%);"></div>
+      </div>
+      <div style="padding:1.5rem 2rem 2rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">Custom Designed · GPS Assist · Installed</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--text);letter-spacing:0.05em;margin-bottom:6px;">Electric Power Steering — Installed</div>
+        <div style="font-size:13px;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:1rem;">Nissan EPS unit integrated into the 1965 Mustang using a fully custom GRZ-designed and CNC-machined bracket. GPS-based assist control — modern technology seamlessly integrated into a classic platform.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">Custom EPS Bracket</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">GPS Assist Control</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">CNC Machined</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#666;">1965 Mustang</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div style="position:relative;width:100%;height:60vh;overflow:hidden;z-index:1;">
-  <img src="4runner.jpeg" alt="2000 Toyota 4Runner — GRZ Engineering Off-Road Build"
-    style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;"/>
+  <img src="4runner.jpeg" alt="2000 Toyota 4Runner" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;"/>
   <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,0.2) 0%,transparent 30%,transparent 55%,rgba(8,8,8,0.95) 100%);"></div>
   <div style="position:absolute;bottom:2.5rem;left:6vw;right:6vw;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
     <div>
@@ -599,29 +276,45 @@ footer::before{
       <div style="font-size:14px;font-weight:300;color:#aaa;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;">Off-Road Suspension · Custom Bumper · Geometry Tuning · Custom Lighting</div>
     </div>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">4WD</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">OFF-ROAD BUILT</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">EPS</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">SUSPENSION DESIGN</div>
-      </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">CNC</div>
-        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CUSTOM BRACKETS</div>
-      </div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">4WD</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">OFF-ROAD BUILT</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">SUS</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">SUSPENSION DESIGN</div></div>
+      <div style="text-align:center;"><div style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--copper);line-height:1;">CNC</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#666;letter-spacing:0.08em;">CUSTOM BRACKETS</div></div>
     </div>
   </div>
 </div>
-
 <div class="copper-line"></div>
 
-<!-- EXPERIENCE -->
+<section class="section" style="padding-bottom:0;">
+  <div class="section-label">// 2000 Toyota 4Runner · Custom Lighting</div>
+  <div class="section-title">Built For The Terrain</div>
+</section>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#111;position:relative;z-index:1;">
+  <div style="position:relative;overflow:hidden;aspect-ratio:4/3;">
+    <img src="headlights.jpg" alt="Custom retrofitted off-road headlights" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.9) 0%,transparent 55%);pointer-events:none;"></div>
+    <div style="position:absolute;top:1rem;right:1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--copper);background:rgba(8,8,8,0.7);padding:4px 10px;border:1px solid var(--copper-dark);">IN PROGRESS</div>
+    <div style="position:absolute;bottom:1.5rem;left:1.5rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:4px;">Custom Lighting · Off-Road Only</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:0.05em;">Custom Retrofitted Off-Road Headlights</div>
+      <div style="font-size:13px;font-weight:300;color:#888;margin-top:2px;">Projector housings · Custom shrouds · Integrated controller · Extreme terrain</div>
+    </div>
+  </div>
+  <div style="background:var(--dark2);display:flex;flex-direction:column;justify-content:center;padding:2rem;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:8px;">4Runner · Custom Engineering</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--text);letter-spacing:0.05em;margin-bottom:1rem;line-height:1.1;">Off-Road Suspension & Custom Fabrication</div>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+      <li style="font-size:13px;font-weight:300;color:#aaa;padding-left:14px;position:relative;line-height:1.5;"><span style="position:absolute;left:0;top:8px;width:5px;height:1px;background:var(--copper);display:block;"></span>Full off-road suspension design and geometry tuning</li>
+      <li style="font-size:13px;font-weight:300;color:#aaa;padding-left:14px;position:relative;line-height:1.5;"><span style="position:absolute;left:0;top:8px;width:5px;height:1px;background:var(--copper);display:block;"></span>Custom CNC brackets and mounting solutions</li>
+      <li style="font-size:13px;font-weight:300;color:#aaa;padding-left:14px;position:relative;line-height:1.5;"><span style="position:absolute;left:0;top:8px;width:5px;height:1px;background:var(--copper);display:block;"></span>Traction optimization for extreme terrain</li>
+      <li style="font-size:13px;font-weight:300;color:#aaa;padding-left:14px;position:relative;line-height:1.5;"><span style="position:absolute;left:0;top:8px;width:5px;height:1px;background:var(--copper);display:block;"></span>Custom retrofitted projector headlights — off-road only</li>
+    </ul>
+  </div>
+</div>
+<div class="copper-line"></div>
+
 <section class="section">
   <div class="section-label">// Professional Experience</div>
   <div class="section-title">In The Field</div>
-
   <div class="exp-card">
     <div class="exp-company">Honda Racing Corporation</div>
     <div class="exp-role">Engineering Technician · Performance Tune Development</div>
@@ -634,7 +327,6 @@ footer::before{
       <li>Provided practical feedback on iterative development cycles — translating real-world behavior into engineering data</li>
     </ul>
   </div>
-
   <div class="exp-card">
     <div class="exp-company">GRZ Engineering</div>
     <div class="exp-role">Founder / Lead Design Engineer</div>
@@ -644,90 +336,73 @@ footer::before{
       <li>Designed suspension and structural components for off-road and performance vehicles — improving strength, articulation, and traction</li>
       <li>Integrated Nissan electric power steering and boosted powertrain on a 1965 Mustang with GPS-based assist control</li>
       <li>Developed off-road suspension and traction solutions for a 2000 Toyota 4Runner including custom brackets and geometry tuning</li>
-      <li>Applied 3D scanning, CNC machining, laser engraving, carbon fiber composites, and 3D printing for rapid prototyping</li>
+      <li>Applied 3D scanning, CNC machining, additive manufacturing, carbon fiber composites, and 3 & 4-axis CNC for rapid prototyping</li>
       <li>Reverse-engineered obsolete components and produced functional replacements and performance upgrades</li>
     </ul>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section class="section" style="background:var(--dark2);">
   <div class="section-label">// Selected Projects</div>
   <div class="section-title">Built, Not Bought</div>
-
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-num">01</div>
       <div class="project-title">1965 Ford Mustang — Full Build</div>
-      <div class="project-desc">Frame-up restoration with 347ci stroker, 174 Whipple supercharger, Holley Sniper EFI, T4 Shelby transmission. Designed and fabricated a custom GPS-assisted electric power steering system from scratch. Trans-Am style engine bay structural reinforcement.</div>
+      <div class="project-desc">Rotisserie restoration with 347ci stroker, B&M roots style blower, Holley Sniper EFI, T4 Shelby transmission. Custom GPS-assisted electric power steering system designed and fabricated from scratch. Trans-Am style engine bay reinforcement.</div>
       <div class="project-tags">
-        <span class="project-tag">Powertrain</span>
-        <span class="project-tag">EFI Tuning</span>
-        <span class="project-tag">Custom EPS</span>
-        <span class="project-tag">Fabrication</span>
-        <span class="project-tag">Structural Eng.</span>
+        <span class="project-tag">Powertrain</span><span class="project-tag">EFI Tuning</span><span class="project-tag">Custom EPS</span><span class="project-tag">Fabrication</span><span class="project-tag">FEA Validated</span>
       </div>
     </div>
     <div class="project-card">
       <div class="project-num">02</div>
       <div class="project-title">2000 Toyota 4Runner — Off-Road</div>
-      <div class="project-desc">Full off-road suspension design, traction optimization, custom brackets and mounts, geometry tuning. Designed and installed custom off-road headlight modifications for improved visibility and durability in extreme terrain.</div>
+      <div class="project-desc">Full off-road suspension design, traction optimization, custom CNC brackets and mounts, geometry tuning. Custom retrofitted projector headlights for extreme terrain visibility.</div>
       <div class="project-tags">
-        <span class="project-tag">Suspension Design</span>
-        <span class="project-tag">Off-Road</span>
-        <span class="project-tag">Geometry Tuning</span>
-        <span class="project-tag">Custom Fab</span>
+        <span class="project-tag">Suspension Design</span><span class="project-tag">Off-Road</span><span class="project-tag">Geometry Tuning</span><span class="project-tag">Custom Fab</span>
       </div>
     </div>
     <div class="project-card">
       <div class="project-num">03</div>
-      <div class="project-title">Carbon Fiber Tail Lights — In Progress</div>
-      <div class="project-desc">Designing and manufacturing ASA core composite tail lights with carbon fiber overlay. Full mold design, composite layup, and finish quality control for a production-intent automotive lighting component.</div>
+      <div class="project-title">1965 Mustang Carbon Fiber Tail Lights</div>
+      <div class="project-desc">Designing and manufacturing tail lights using carbon impregnated filament with carbon fiber overlay. Full mold design, composite layup, and finish quality control for a production-intent automotive lighting component.</div>
       <div class="project-tags">
-        <span class="project-tag">Composites</span>
-        <span class="project-tag">Mold Design</span>
-        <span class="project-tag">Carbon Fiber</span>
-        <span class="project-tag">ABS Core</span>
+        <span class="project-tag">Carbon Impregnated Filament</span><span class="project-tag">CF Overlay</span><span class="project-tag">Mold Design</span>
       </div>
     </div>
     <div class="project-card">
       <div class="project-num">04</div>
       <div class="project-title">CNC NFC Business Card</div>
-      <div class="project-desc">Designed and machined a high-end business card with aluminum substrate, carbon fiber face, and embedded NFC chip. Full CAD-to-CAM-to-production workflow — concept, toolpaths, fixturing, machining, and finish work.</div>
+      <div class="project-desc">Designed and machined a high-end business card with aluminum substrate, carbon fiber face, and embedded NFC chip. Full CAD-to-CAM-to-production workflow.</div>
       <div class="project-tags">
-        <span class="project-tag">CNC Machining</span>
-        <span class="project-tag">CAM Programming</span>
-        <span class="project-tag">Carbon Fiber</span>
-        <span class="project-tag">NFC</span>
+        <span class="project-tag">CNC Machining</span><span class="project-tag">CAM Programming</span><span class="project-tag">Carbon Fiber</span><span class="project-tag">NFC</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section class="section">
   <div class="section-label">// Technical Skills</div>
   <div class="section-title">The Toolbox</div>
-
   <div class="skills-grid">
     <div class="skill-group">
       <div class="skill-group-title">CAD / CAM / Simulation</div>
       <ul class="skill-list">
         <li>SolidWorks — Parts, Assemblies, Drawings</li>
         <li>FEA — Stress & Structural Analysis</li>
-        <li>CAM — 3-axis & 4-axis Toolpaths</li>
+        <li>CAM — 3 & 4-Axis Toolpaths · G-code</li>
+        <li>Additive Manufacturing — FDM & Carbon Filament</li>
         <li>3D Scanning & Reverse Engineering</li>
-        <li>3D Printing — Rapid Prototyping</li>
       </ul>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Fabrication & Manufacturing</div>
       <ul class="skill-list">
-        <li>CNC Machining — Fixturing & G-code</li>
+        <li>CNC Machining — 3 & 4-Axis, Fixturing & G-code</li>
+        <li>Additive Manufacturing — FDM & Carbon Filament</li>
         <li>Carbon Fiber & Composite Layup</li>
         <li>Body Panel Welding & Structural Work</li>
         <li>Laser Engraving & Part Marking</li>
-        <li>Prototype Fabrication</li>
       </ul>
     </div>
     <div class="skill-group">
@@ -753,11 +428,41 @@ footer::before{
   </div>
 </section>
 
-<!-- EDUCATION -->
+<section class="section" style="background:var(--dark2);">
+  <div class="section-label">// Work In Progress · Coming Soon</div>
+  <div class="section-title">On The Bench</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a;border:1px solid #1a1a1a;">
+    <div style="background:var(--dark);position:relative;overflow:hidden;">
+      <div style="position:relative;height:260px;overflow:hidden;background:linear-gradient(135deg,#0a0a0a,#1a1a1a);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;opacity:0.15;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--copper);letter-spacing:0.1em;">TAIL</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--copper);letter-spacing:0.1em;">LIGHTS</div>
+        </div>
+        <div style="position:absolute;top:1rem;right:1rem;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#b87333;background:rgba(8,8,8,0.7);padding:4px 10px;border:1px solid #7a4a1a;">IN PROGRESS</div>
+        <div style="position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:10px;color:#444;letter-spacing:0.1em;white-space:nowrap;">PHOTOS COMING SOON</div>
+      </div>
+      <div style="padding:1.5rem 2rem 2rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">Composites · Carbon Fiber Overlay</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--text);letter-spacing:0.05em;margin-bottom:6px;">1965 Mustang Carbon Fiber Tail Lights</div>
+        <div style="font-size:13px;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:1rem;">Carbon impregnated filament with carbon fiber overlay. Full mold design, composite layup, and finish quality control for a production-intent automotive lighting component.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#555;">Carbon Impregnated Filament</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#555;">Carbon Fiber Overlay</span>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;background:var(--dark4);color:#555;">Mold Design</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--dark2);display:flex;flex-direction:column;justify-content:center;padding:2rem 2.5rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;color:var(--copper);text-transform:uppercase;margin-bottom:8px;">More Projects Coming</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--text);letter-spacing:0.05em;margin-bottom:1rem;line-height:1.1;">Portfolio of CAD Models, Simulations & Completed Projects Available Upon Request</div>
+      <div style="font-size:13px;font-weight:300;color:var(--muted);line-height:1.6;">Active design engineering projects ongoing. SolidWorks models, FEA simulations, CNC programs, and full project documentation available for review.</div>
+    </div>
+  </div>
+</section>
+
 <section class="section" style="background:var(--dark2);">
   <div class="section-label">// Education</div>
   <div class="section-title">The Foundation</div>
-
   <div class="edu-card">
     <div>
       <div class="edu-degree">Associate of Science — Business Administration</div>
@@ -771,7 +476,6 @@ footer::before{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer style="position:relative;">
   <div>
     <div class="footer-name">GRZ Engineering</div>
